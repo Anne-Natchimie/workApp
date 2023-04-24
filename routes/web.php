@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/layouts', [WorkController::class, 'index'])->name('layouts.home') ; 
+
+Route::get('layouts/add', [WorkController::class, 'add'])->name('layouts.add') ;

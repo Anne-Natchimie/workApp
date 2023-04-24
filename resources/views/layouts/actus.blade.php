@@ -1,25 +1,24 @@
 <!-- component -->
 <body class="bg-black">
     
-<div class=" mx-auto lg:max-w-7xl mt-3  ">
-	<div class="max-w-7xl mx-auto px-5 mb-3">
-		<div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-			<div
-				class="max-w-xl bg-white">
-					<div class="p-5">
 
-						<h1 class="mb-2 text-2xl font-bold tracking-tight text-black"></h1>
+					<div class="flex justify-between grid-cols-3 gap-6 m-10 mb-10">
 
-                        <p class="mb-3 font-normal text-black"></p>
+						@foreach ($works as $itemWork)
 
-						<img src="" alt="">
+						<article class="h-max container bg-white shadow-2xl rounded-2xl p-5">
+
+						<img class="rounded-t-lg px-5 py-2" src="https://i.pinimg.com/736x/a9/b1/1e/a9b11e4d36f9030511718670fa7c6af8.jpg" alt="step3">
+
+						<h1 class="text-2xl font-bold text-black">{{$itemWork->titre}}</h1>
+
+                        <p class="font-normal text-black">{{Str::limit($itemWork->description, 300)}}</p>
+
+						</article>
+
+						@endforeach
 
 					</div>
-			</div>
-
-		</div>
-	</div>
-</div>
 
 </body>
 
